@@ -13,6 +13,7 @@ import store from "./store/store.js";
 import { Provider } from "react-redux";
 import CheckoutPage from "./pages/checkOut.jsx";
 import OrderSuccess from "./pages/OrderSuccess.jsx";
+import Error from "./pages/Error.jsx";
 
 const Layout = () => (
   <div className="w-screen h-screen flex flex-col overflow-hidden hide-scrollbar">
@@ -27,6 +28,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout />,
+    errorElement: <Error />,
     children: [
       {
         path: "/",
