@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "customSans";
+  src: url("./assets/font/WorkSans-VariableFont_wght.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Basis";
+  src: local("Basis"),
+    url("./assets/font/BASISGROTESQUEPRO-BLACK.TTF") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
