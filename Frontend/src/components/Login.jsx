@@ -17,7 +17,7 @@ const Login = ({ setIsSwapped }) => {
         password: password,
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/login",
+        "https://dish-dash.onrender.com/api/users/login",
         formdata
       );
       console.log(data);

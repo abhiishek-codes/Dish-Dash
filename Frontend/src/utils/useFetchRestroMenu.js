@@ -21,10 +21,13 @@ const useFetchRestroMenu = (id, setMenu) => {
   useEffect(() => {
     const fetchMenu = async () => {
       try {
-        if (url) await axios.post("http://localhost:5000", { url: url });
+        if (url)
+          await axios.post("https://dish-dash.onrender.com", { url: url });
 
         if (url) {
-          const { data } = await axios.get("http://localhost:5000/fetchMenu");
+          const { data } = await axios.get(
+            "https://dish-dash.onrender.com/fetchMenu"
+          );
           setMenu(data.data.cards);
           console.log(data);
         }

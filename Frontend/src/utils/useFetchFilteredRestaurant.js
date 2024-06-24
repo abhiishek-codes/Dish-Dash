@@ -26,11 +26,12 @@ const useFetchFilteredRestaurant = (setRestaurants, collectionId, tags) => {
   useEffect(() => {
     const fetchRestroData = async () => {
       try {
-        if (url) await axios.post("http://localhost:5000/", { url: url });
+        if (url)
+          await axios.post("https://dish-dash.onrender.com/", { url: url });
 
         if (url) {
           const { data } = await axios.get(
-            "http://localhost:5000/fetchFilteredRestro"
+            "https://dish-dash.onrender.com/fetchFilteredRestro"
           );
           console.log(data);
           setRestaurants(data.data.cards);

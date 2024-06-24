@@ -36,7 +36,7 @@ const PaymentForm = ({ address }) => {
     try {
       // Step 1: Create payment intent
       const paymentIntentResponse = await axios.post(
-        "http://localhost:5000/create-payment-intent",
+        "https://dish-dash.onrender.com/create-payment-intent",
         {
           amount: amount * 100,
         }
@@ -58,7 +58,7 @@ const PaymentForm = ({ address }) => {
         if (result.paymentIntent.status === "succeeded") {
           try {
             const orderResponse = await axios.post(
-              "http://localhost:5000/api/orders/create",
+              "https://dish-dash.onrender.com/api/orders/create",
               {
                 user: user._id,
                 items: items,

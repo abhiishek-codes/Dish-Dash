@@ -19,7 +19,7 @@ const Signup = ({ setIsSwapped }) => {
         password: password,
       };
       const { data } = await axios.post(
-        "http://localhost:5000/api/users/signup",
+        "https://dish-dash.onrender.com/api/users/signup",
         formdata
       );
       console.log(data);

@@ -21,11 +21,15 @@ const useFetchResaurant = (setrestroList, setFilteredRestro) => {
   useEffect(() => {
     const fetchRestroData = async () => {
       try {
-        if (url) await axios.post("http://localhost:5000/", { url: url });
+        if (url)
+          await axios.post("https://dish-dash.onrender.com/", { url: url });
         if (url) {
-          var { data } = await axios.get("http://localhost:5000/fetchRestro", {
-            mode: "cors",
-          });
+          var { data } = await axios.get(
+            "https://dish-dash.onrender.com/fetchRestro",
+            {
+              mode: "cors",
+            }
+          );
 
           console.log(data);
           setrestroList(data.data.cards);
